@@ -244,9 +244,34 @@
 
 </footer>
 
-	<script type="text/javascript">
+<script type="text/javascript">
 	window.onload = document.getElementById('mytext').select();
-	</script>
+
+    var owner = this,
+      pps = owner.properties,
+      Util = Cleave.Util,
+      charCode = event.which || event.keyCode;
+
+    // hit backspace when last character is delimiter
+
+    if (Util.isAndroid() &&
+        event.target.value.length &&
+        event.target.value.length === this._lastEventValue.length - 1 &&
+        Util.isDelimiter(pps.result.slice(-1), pps.delimiter, pps.delimiters)
+    ) {
+      charCode = 8;
+    }
+    if (charCode === 8 &&
+        Util.isDelimiter(pps.result.slice(-1), pps.delimiter, pps.delimiters)) {
+      pps.backspace = true;
+    } else {
+      pps.backspace = false;
+    }
+
+    this._lastEventValue = event.target.value;
+
+
+</script>
 
 </body>
 </html>
