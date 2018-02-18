@@ -1,191 +1,193 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Shapes</title>
+	<title>Flying Triangles!</title>
 	<script type="text/javascript" src="paper-full.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.8/howler.core.min.js"></script>
+	<script type="text/javascript" src="howler.js"></script>
 	<link rel="stylesheet" type="text/css" href="styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<script type="text/paperscript" canvas="myCanvas">
 	var keyData = {
 		a: {
 			color: "purple",
 			sound: new Howl({
-				src: ['sounds/bubbles.mp3']
+				src: ['./sounds/bubbles.mp3']
 		})
 		},
 
 		b: {
 			color: "red",
 			sound: new Howl({
-				src: ['sounds/clay.mp3']
+				src: ['./sounds/clay.mp3']
 		})
 		},
 
 		c: {
 			color: "blue",
 			sound: new Howl({
-				src: ['sounds/confetti.mp3']
+				src: ['.//sounds/confetti.mp3']
 		})
 		},
 
 		d: {
 			color: "aqua",
 			sound: new Howl({
-				src: ['sounds/corona.mp3']
+				src: ['./sounds/corona.mp3']
 		})
 		},
 
 		e: {
 			color: "CornflowerBlue ",
 			sound: new Howl({
-				src: ['sounds/dotted-spiral.mp3']
+				src: ['./sounds/dotted-spiral.mp3']
 		})
 		},
 
 		f: {
 			color: "DarkOliveGreen ",
 			sound: new Howl({
-				src: ['sounds/flash-1.mp3']
+				src: ['./sounds/flash-1.mp3']
 		})
 		},
 
 		g: {
 			color: "FireBrick ",
 			sound: new Howl({
-				src: ['sounds/flash-2.mp3']
+				src: ['./sounds/flash-2.mp3']
 		})
 		},
 
 		h: {
 			color: "green",
 			sound: new Howl({
-				src: ['sounds/flash-3.mp3']
+				src: ['./sounds/flash-3.mp3']
 		})
 		},
 
 		i: {
 			color: "orange",
 			sound: new Howl({
-				src: ['sounds/glimmer.mp3']
+				src: ['./sounds/glimmer.mp3']
 		})
 		},
 
 		j: {
 			color: "yellow",
 			sound: new Howl({
-				src: ['sounds/moon.mp3']
+				src: ['./sounds/moon.mp3']
 		})
 		},
 
 		k: {
 			color: "ivory",
 			sound: new Howl({
-				src: ['sounds/pinwheel.mp3']
+				src: ['./sounds/pinwheel.mp3']
 		})
 		},
 
 		l: {
 			color: "lavender",
 			sound: new Howl({
-				src: ['sounds/piston-1.mp3']
+				src: ['./sounds/piston-1.mp3']
 		})
 		},
 
 		m: {
 			color: "lightblue",
 			sound: new Howl({
-				src: ['sounds/piston-2.mp3']
+				src: ['./sounds/piston-2.mp3']
 		})
 		},
 
 		n: {
 			color: "linen",
 			sound: new Howl({
-				src: ['sounds/piston-3.mp3']
+				src: ['./sounds/piston-3.mp3']
 		})
 		},
 
 		o: {
-			color: "rose",
+			color: "mistyrose",
 			sound: new Howl({
-				src: ['sounds/prism-1.mp3']
+				src: ['./sounds/prism-1.mp3']
 		})
 		},
 
 		p: {
 			color: "orchid",
 			sound: new Howl({
-				src: ['sounds/prism-2.mp3']
+				src: ['./sounds/prism-2.mp3']
 		})
 		},
 
 		q: {
 			color: "PaleTurquoise",
 			sound: new Howl({
-				src: ['sounds/prism-3.mp3']
+				src: ['./sounds/prism-3.mp3']
 		})
 		},
 
 		r: {
 			color: "PaleVioletRed",
 			sound: new Howl({
-				src: ['sounds/splits.mp3']
+				src: ['./sounds/splits.mp3']
 		})
 		},
 
 		s: {
 			color: "Peru",
 			sound: new Howl({
-				src: ['sounds/squiggle.mp3']
+				src: ['./sounds/squiggle.mp3']
 		})
 		},
 
 		t: {
 			color: "Plum",
 			sound: new Howl({
-				src: ['sounds/strike.mp3']
+				src: ['./sounds/strike.mp3']
 		})
 		},
 
 		u: {
 			color: "Salmon",
 			sound: new Howl({
-				src: ['sounds/suspension.mp3']
+				src: ['./sounds/suspension.mp3']
 		})
 		},
 
 		v: {
 			color: "SandyBrown",
 			sound: new Howl({
-				src: ['sounds/timer.mp3']
+				src: ['./sounds/timer.mp3']
 		})
 		},
 
 		w: {
 			color: "SteelBlue",
 			sound: new Howl({
-				src: ['sounds/ufo.mp3']
+				src: ['./sounds/ufo.mp3']
 		})
 		},
 
 		x: {
 			color: "Teal",
 			sound: new Howl({
-				src: ['sounds/veil.mp3']
+				src: ['./sounds/veil.mp3']
 		})
 		},
 
 		y: {
 			color: "Wheat",
 			sound: new Howl({
-				src: ['sounds/wipe.mp3']
+				src: ['./sounds/wipe.mp3']
 		})
 		},
 
 		z: {
 			color: "YellowGreen",
 			sound: new Howl({
-				src: ['sounds/zig-zag.mp3']
+				src: ['./sounds/zig-zag.mp3']
 		})
 		}				
 	}
@@ -223,7 +225,8 @@
 
 </head>
 <body>
-	<canvas id="myCanvas" resize></canvas>
+
+<canvas id="myCanvas" resize></canvas>
 
 <footer class="footer-basic-centered">
 
@@ -236,7 +239,13 @@
 	</p>
 
 	<p class="footer-company-name">David Lac &copy; 2018</p>
+	<textarea id='mytext' style='visibility:hidden;'>for mobile users</textarea>
 
 </footer>
+
+	<script type="text/javascript">
+	window.onload = document.getElementById('mytext').select();
+	</script>
+
 </body>
 </html>
